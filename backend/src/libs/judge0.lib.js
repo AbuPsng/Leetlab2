@@ -1,14 +1,25 @@
 import axios from "axios";
 
-const languageMap = {
+const languageIdMap = {
     PYTHON: 71,
     JAVA: 62,
     JAVASCRIPT: 63,
 };
 
+const languageNameMap = {
+    74: "TypeScript",
+    63: "JavaScript",
+    71: "Python",
+    62: "Java"
+}
+
 export const getJudge0LanguageId = (language) => {
-    return languageMap[language.toUpperCase()];
+    return languageIdMap[language.toUpperCase()];
 };
+
+export const getLanguageName = (languageId) => {
+    return languageIdMap[languageId] || "Unknown"
+}
 
 const sleep = (milliseconds) =>
     new Promise((resolve) => setTimeout(resolve, milliseconds));
