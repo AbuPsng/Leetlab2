@@ -48,7 +48,7 @@ model User{
 }
 
 model Problem{
- id String @id @default(uuid()) 
+  id String @id @default(uuid()) 
   title String
   description String
   difficulty Difficulty @default(EASY)
@@ -68,8 +68,8 @@ model Problem{
 
   //Relationship
   user User@relation(fields: [userId],references: [id], onDelete :Cascade)
-submission Submission[]
-solvedBy ProblemSolved[]
+  submission Submission[]
+  solvedBy ProblemSolved[]
 }
 
 model Submission{
