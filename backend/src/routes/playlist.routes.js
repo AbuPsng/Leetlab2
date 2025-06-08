@@ -10,7 +10,7 @@ playlistRoutes.get("/:playlistId", authMiddleware, getPlaylistDetails)
 
 playlistRoutes.post("/create-playlist", authMiddleware, createPlaylist)
 
-playlistRoutes.post("/:playlistId/create-playlist", authMiddleware, addProblemToPlaylist)
+playlistRoutes.post("/:playlistId/add-problem", authMiddleware, addProblemToPlaylist)
 
 playlistRoutes.delete("/:playlistId", authMiddleware, deletePlaylist)
 
