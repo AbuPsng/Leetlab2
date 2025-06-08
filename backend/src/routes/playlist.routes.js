@@ -4,7 +4,7 @@ import { addProblemToPlaylist, createPlaylist, deletePlaylist, getAllListDetails
 
 const playlistRoutes = express.Router()
 
-playlistRoutes.get("/", authMiddleware, getAllListDetails)
+playlistRoutes.get("/all-playlist", authMiddleware, getAllListDetails)
 
 playlistRoutes.get("/:playlistId", authMiddleware, getPlaylistDetails)
 

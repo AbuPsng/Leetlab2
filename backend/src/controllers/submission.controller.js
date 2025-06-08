@@ -1,8 +1,10 @@
+import { db } from "../libs/db.js"
+
 export const getAllSubmission = async (req, res) => {
     try {
         const userId = req.user.id
 
-        const submissions = await db.submission.findMay({
+        const submissions = await db.submission.findMany({
             where: {
                 userId
             }
@@ -30,7 +32,7 @@ export const getSubmissionsForProblem = async (req, res) => {
 
 
 
-        const submissions = await db.submission.findMay({
+        const submissions = await db.submission.findMany({
             where: {
                 userId,
                 problemId

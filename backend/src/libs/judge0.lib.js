@@ -18,7 +18,7 @@ export const getJudge0LanguageId = (language) => {
 };
 
 export const getLanguageName = (languageId) => {
-    return languageIdMap[languageId] || "Unknown"
+    return languageNameMap[languageId] || "Unknown"
 }
 
 const sleep = (milliseconds) =>
